@@ -4,9 +4,9 @@ import 'dart:io';
 import 'package:flutterpi_tool/src/build_system/build_app.dart';
 import 'package:flutterpi_tool/src/cache.dart';
 import 'package:flutterpi_tool/src/common.dart';
+import 'package:flutterpi_tool/src/devices/flutterpi_ssh/ssh_utils.dart';
 import 'package:flutterpi_tool/src/fltool/common.dart';
 import 'package:flutterpi_tool/src/more_os_utils.dart';
-import 'package:flutterpi_tool/src/devices/flutterpi_ssh/ssh_utils.dart';
 import 'package:meta/meta.dart';
 import 'package:path/path.dart' as path;
 
@@ -92,6 +92,7 @@ class FlutterpiSshDevice extends Device {
           category: Category.mobile,
           platformType: PlatformType.custom,
           ephemeral: false,
+          logger: logger,
         );
 
   final SshUtils sshUtils;
